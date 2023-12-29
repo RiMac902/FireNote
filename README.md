@@ -1,4 +1,4 @@
-# clean_firenote
+# Flutter FireNote
 
 A new Flutter project.
 

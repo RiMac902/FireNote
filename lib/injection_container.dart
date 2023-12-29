@@ -1,3 +1,4 @@
+import 'package:clean_firenote/feature/authentication/domain/usecases/signin_apple_usecase.dart';
 import 'package:get_it/get_it.dart';
 
 import 'feature/authentication/data/data_sources/firebase_auth_service.dart';
@@ -32,6 +33,7 @@ Future<void> initializeDependencies() async {
   sl.registerSingleton<SendRecoveryEmailUseCase>(SendRecoveryEmailUseCase(sl()));
   sl.registerSingleton<SignInWithGoogleUseCase>(SignInWithGoogleUseCase(sl()));
   sl.registerSingleton<SignInWithFacebookUseCase>(SignInWithFacebookUseCase(sl()));
+  sl.registerSingleton<SignInWithAppleUseCase>(SignInWithAppleUseCase(sl()));
   sl.registerSingleton<ChangeDisplayNameUseCase>(ChangeDisplayNameUseCase(sl()));
   sl.registerSingleton<ChangeEmailUseCase>(ChangeEmailUseCase(sl()));
   sl.registerSingleton<ChangePasswordUseCase>(ChangePasswordUseCase(sl()));

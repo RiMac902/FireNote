@@ -62,7 +62,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             children: [
                               Text(
                                 'Welcome back!',
-                                style: Theme.of(context).textTheme.displayMedium,
+                                style:
+                                    Theme.of(context).textTheme.displayMedium,
                                 textAlign: TextAlign.center,
                               ),
                               const SizedBox(height: 10),
@@ -111,7 +112,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               const SizedBox(height: 25),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   const Text("You don't have an account?"),
                                   TextButton(
@@ -128,7 +130,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               const SizedBox(height: 35),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   IconButton(
                                     onPressed: () {
@@ -156,7 +159,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                   const SizedBox(height: 16),
                                   IconButton(
                                     onPressed: () {
-                                      /// Todo: Add Facebook
+                                      BlocProvider.of<AuthBloc>(context).add(
+                                        SignInWithFacebookAuthEvent(
+                                          context: context,
+                                        ),
+                                      );
                                     },
                                     icon: Image.asset(
                                       Images.facebook,
