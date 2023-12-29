@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 import '../../../domain/usecases/edit_user_usecase.dart';
 import '../../../domain/usecases/get_current_user_usecase.dart';
 import '../../../domain/usecases/send_recovery_email_usecase.dart';
+import '../../../domain/usecases/signin_apple_usecase.dart';
 import '../../../domain/usecases/signin_email_password.dart';
 import '../../../domain/usecases/signin_facebook_usecase.dart';
 import '../../../domain/usecases/signing_google_usecase.dart';
@@ -26,6 +27,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final SignInWithGoogleUseCase _signInWithGoogleUseCase;
   final SignInWithFacebookUseCase _signInWithFacebookUseCase;
   final ChangeDisplayNameUseCase _changeDisplayNameUseCase;
+  final SignInWithAppleUseCase _signInWithAppleUseCase;
 
   AuthBloc(
     this._signInWithEmailAndPasswordUseCase,
@@ -36,6 +38,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     this._signInWithGoogleUseCase,
     this._signInWithFacebookUseCase,
     this._changeDisplayNameUseCase,
+    this._signInWithAppleUseCase,
   ) : super(const AuthSuccess()) {
     on<SignInEmailPasswordAuthEvent>(_onSignInEmailPassword);
     on<SignUpEmailPasswordAuthEvent>(_onSignUpEmailPassword);
@@ -81,6 +84,19 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     emit(const AuthLoading());
     try {
       await _signInWithFacebookUseCase();
+      emit(const AuthSuccess());
+      GoRouter.of(event.context).goNamed('home');
+    } catch (e) {
+      emit(const AuthFailure());
+      ScaffoldMessenger.of(event.context)
+          .showSnackBar(SnackBar(content: Text(e.toString())));
+    }
+  }
+
+  _onSignInWithApple(SignInWithAppleAuthEvent event, Emitter<AuthState> emit) async {
+    emit(const AuthLoading());
+    try {
+      await _signInWithAppleUseCase();
       emit(const AuthSuccess());
       GoRouter.of(event.context).goNamed('home');
     } catch (e) {

@@ -59,6 +59,15 @@ class SignInWithGoogleAuthEvent extends AuthEvent {
   });
 }
 
+class SignInWithAppleAuthEvent extends AuthEvent {
+  final BuildContext context;
+
+  const SignInWithAppleAuthEvent({
+    required this.context,
+  });
+}
+
+
 class SignInWithFacebookAuthEvent extends AuthEvent {
   final BuildContext context;
 

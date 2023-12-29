@@ -43,7 +43,7 @@ Future<void> initializeDependencies() async {
   ///Blocs
 
   ///Global:
-  sl.registerFactory<AuthBloc>(() => AuthBloc(sl(), sl(), sl(), sl(), sl(), sl(), sl(), sl()));
+  sl.registerFactory<AuthBloc>(() => AuthBloc(sl(), sl(), sl(), sl(), sl(), sl(), sl(), sl(), sl()));
 
 
 }

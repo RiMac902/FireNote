@@ -140,7 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                           context: context,
                                         ),
                                       );
-                                    }, //Todo Log in
+                                    },
                                     icon: Image.asset(
                                       Images.google,
                                       height: 55,
@@ -149,7 +149,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                   const SizedBox(height: 16),
                                   IconButton(
                                     onPressed: () {
-                                      /// Todo: Add Apple
+                                      BlocProvider.of<AuthBloc>(context).add(
+                                        SignInWithAppleAuthEvent(
+                                          context: context,
+                                        ),
+                                      );
                                     },
                                     icon: Image.asset(
                                       Images.apple,
