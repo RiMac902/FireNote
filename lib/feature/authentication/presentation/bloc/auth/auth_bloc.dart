@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../../core/utils/helpers/snackbar_helper.dart';
 import '../../../domain/usecases/edit_user_usecase.dart';
 import '../../../domain/usecases/get_current_user_usecase.dart';
 import '../../../domain/usecases/send_recovery_email_usecase.dart';
@@ -46,6 +47,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<SendRecoveryEmailAuthEvent>(_onSendRecoveryEmail);
     on<SignInWithGoogleAuthEvent>(_onSignInWithGoogle);
     on<SignInWithFacebookAuthEvent>(_onSignInWithFacebook);
+    on<SignInWithAppleAuthEvent>(_onSignInWithApple);
   }
 
   _onSignInEmailPassword(
@@ -60,8 +62,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       GoRouter.of(event.context).goNamed('home');
     } catch (e) {
       emit(const AuthFailure());
-      ScaffoldMessenger.of(event.context)
-          .showSnackBar(SnackBar(content: Text(e.toString())));
+      SnackBarHelper.showError(event.context, e);
     }
   }
 
@@ -74,8 +75,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       GoRouter.of(event.context).goNamed('home');
     } catch (e) {
       emit(const AuthFailure());
-      ScaffoldMessenger.of(event.context)
-          .showSnackBar(SnackBar(content: Text(e.toString())));
+      SnackBarHelper.showError(event.context, e);
     }
   }
 
@@ -88,12 +88,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       GoRouter.of(event.context).goNamed('home');
     } catch (e) {
       emit(const AuthFailure());
-      ScaffoldMessenger.of(event.context)
-          .showSnackBar(SnackBar(content: Text(e.toString())));
+      SnackBarHelper.showError(event.context, e);
     }
   }
 
-  _onSignInWithApple(SignInWithAppleAuthEvent event, Emitter<AuthState> emit) async {
+  _onSignInWithApple(
+      SignInWithAppleAuthEvent event, Emitter<AuthState> emit) async {
     emit(const AuthLoading());
     try {
       await _signInWithAppleUseCase();
@@ -101,8 +101,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       GoRouter.of(event.context).goNamed('home');
     } catch (e) {
       emit(const AuthFailure());
-      ScaffoldMessenger.of(event.context)
-          .showSnackBar(SnackBar(content: Text(e.toString())));
+      SnackBarHelper.showError(event.context, e);
     }
   }
 
@@ -119,8 +118,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       GoRouter.of(event.context).goNamed('home');
     } catch (e) {
       emit(const AuthFailure());
-      ScaffoldMessenger.of(event.context)
-          .showSnackBar(SnackBar(content: Text(e.toString())));
+      SnackBarHelper.showError(event.context, e);
     }
   }
 
@@ -132,8 +130,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       GoRouter.of(event.context).goNamed('login');
     } catch (e) {
       emit(const AuthFailure());
-      ScaffoldMessenger.of(event.context)
-          .showSnackBar(SnackBar(content: Text(e.toString())));
+      SnackBarHelper.showError(event.context, e);
     }
   }
 
@@ -149,8 +146,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           .showSnackBar(const SnackBar(content: Text('Recovery email sent!')));
     } catch (e) {
       emit(const AuthFailure());
-      ScaffoldMessenger.of(event.context)
-          .showSnackBar(SnackBar(content: Text(e.toString())));
+      SnackBarHelper.showError(event.context, e);
     }
   }
 
