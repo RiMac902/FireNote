@@ -1,0 +1,178 @@
+{
+  "project_info": {
+    "project_number": "1021668883034",
+    "project_id": "bloc-firebase-71dff",
+    "storage_bucket": "bloc-firebase-71dff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021668883034:android:0d59583174affd44fd7663",
+        "android_client_info": {
+          "package_name": "com.example.bloc_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021668883034-r5hu3d9a0onhdvlsmo5h9fn4ibar0n4u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bloc_firebase",
+            "certificate_hash": "7749388732306ccb91c9d108c202716071c06f4e"
+          }
+        },
+        {
+          "client_id": "1021668883034-2nhok77gpj9n6n6e550p3touapfldr9n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7o20G0cVsMhVQyaVreLz0l7_pJIciWXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021668883034-2nhok77gpj9n6n6e550p3touapfldr9n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1021668883034-6ub69k88omb76b5lnkl5n5rbq17efl1o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fireNote"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021668883034:android:e5c1fb16c685902efd7663",
+        "android_client_info": {
+          "package_name": "com.example.clean_firenote"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021668883034-2nhok77gpj9n6n6e550p3touapfldr9n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7o20G0cVsMhVQyaVreLz0l7_pJIciWXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021668883034-2nhok77gpj9n6n6e550p3touapfldr9n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1021668883034-6ub69k88omb76b5lnkl5n5rbq17efl1o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fireNote"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021668883034:android:c8789153317fdb68fd7663",
+        "android_client_info": {
+          "package_name": "com.example.fire_note"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021668883034-rp3fnl45ossrdcr1qbp8j65g87pvgtu7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fire_note",
+            "certificate_hash": "7749388732306ccb91c9d108c202716071c06f4e"
+          }
+        },
+        {
+          "client_id": "1021668883034-2nhok77gpj9n6n6e550p3touapfldr9n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7o20G0cVsMhVQyaVreLz0l7_pJIciWXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021668883034-2nhok77gpj9n6n6e550p3touapfldr9n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1021668883034-6ub69k88omb76b5lnkl5n5rbq17efl1o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fireNote"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021668883034:android:1bc224377dd57cacfd7663",
+        "android_client_info": {
+          "package_name": "com.example.firenotion_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021668883034-cobc2hrajlb3ritosetj94mktlbknfi4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firenotion_app",
+            "certificate_hash": "7749388732306ccb91c9d108c202716071c06f4e"
+          }
+        },
+        {
+          "client_id": "1021668883034-2nhok77gpj9n6n6e550p3touapfldr9n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7o20G0cVsMhVQyaVreLz0l7_pJIciWXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021668883034-2nhok77gpj9n6n6e550p3touapfldr9n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1021668883034-6ub69k88omb76b5lnkl5n5rbq17efl1o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fireNote"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
