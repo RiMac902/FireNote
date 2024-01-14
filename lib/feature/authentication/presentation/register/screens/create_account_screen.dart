@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../components/custom_filled_button.dart';
-import '../../../../components/outlined_text_form_field.dart';
+
+import '../../../../../core/components/custom_filled_button.dart';
+import '../../../../../core/components/outlined_text_form_field.dart';
 import '../../bloc/auth/auth_bloc.dart';
 
 class CreateAccountScreen extends StatefulWidget {

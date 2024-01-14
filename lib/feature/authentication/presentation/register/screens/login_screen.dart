@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../../core/components/custom_filled_button.dart';
+import '../../../../../core/components/divider_with_text.dart';
+import '../../../../../core/components/outlined_text_form_field.dart';
 import '../../../../../resources/resources.dart';
-import '../../../../components/custom_filled_button.dart';
-import '../../../../components/divider_with_text.dart';
-import '../../../../components/outlined_text_form_field.dart';
 import '../../bloc/auth/auth_bloc.dart';
 
 class LoginScreen extends StatefulWidget {
